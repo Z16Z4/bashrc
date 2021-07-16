@@ -6,15 +6,13 @@ clear
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 alias cb='cd ..' #change back
-PS1="\[\e[34m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[1;33m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\]\[\e[34m\]]\[\e[m\]\e[1;33m:\n"
-
-#PS1="\[\e[34m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[1;33m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\]\[\e[34m\]]\[\e[m\]> "
+PS1="\[\e[34m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[1;33m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\]\[\e[34m\]]\[\e[m\]\e[1;33m\n:  "
+echo "
+  Script Kiddie Park, System Security Interface
+  "
 LS_COLORS='di=35:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'
 export LS_COLORS
-#PS1="\[\e[34m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[1;33m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\]\[\e[34m\]]\[\e[m\]\e[1;33m "
 #set -o vi #vim configuration for prompt
-#PS1='\[\033[01;32m\]\u@\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-#PS1="[\e[1;35m\u\e[1;34m@\e[1;33m]\h\w$>> "
 alias ddown='docker-compose down'
 alias archcraft='update-archcraft-config --openbox'
 alias archcraft2='update-archcraft-config --base'
@@ -25,12 +23,8 @@ alias audio='scream -i virbr0'
 alias syslib='sudo systemctl start libvirtd.service'
 alias win11='bash /home/greek/scripts/win11.sh'
 alias virt='sudo virt-manager'
-alias look1='looking-glass-client -F -G -m 63 opengl:vsync input:rawMouse opengl:vsync win:minimizeOnFocusLoss'
-alias look2='looking-glass-client -G -m 63 input:rawMouse win:minimizeOnFocusLoss'
-alias peak2='looking-glass-client -d -a -m 63'
 #input:rawMouse
 alias peak='looking-glass-client -G -m 63 input:rawMouse spice:alwaysShowCursor win:borderless win:size=1920x1080'
-alias peak3='looking-glass-client -G -m 63 input:rawMouse opengl:vsync win:borderless win:size=1920x1080'
 alias macos='bash /home/greek/scripts/macos.sh'
 alias win10='bash /home/greek/scripts/win10.sh'
 alias shutdown='bash ~/scripts/virt-menu.sh'
@@ -49,7 +43,6 @@ alias xrp='curl rate.sx/xrp'
 alias xmr='curl rate.sx/xmr'
 alias viewalias='cat ~/.bashrc'
 alias youtube='ytfzf -t'
-alias anime='bash ~/scripts/ani*'
 alias vmlist='sudo virsh list --all'
 alias vmstart='sudo virsh start'
 alias vmforceoff='sudo virsh destroy'
@@ -83,16 +76,20 @@ alias mine='sudo sysctl -w vm.nr_hugepages=128 && sudo ./xmr-stak-rx --noTest'
 alias sesh='abduco -A $1 $2'
 alias vpn='echo "mullvad relay list" && echo "mullvad commands" && echo "mullvad account get" && echo "mullvad relay set location" && echo "mullvad connect" && echo "mullvad status" && echo "mullvad relay update" && echo "mullvad auto-connect set on/off" && echo "mullvad-exclude <program>" && echo "mullvad split-tunnel pid list" && echo "mullvad split-tunnel pid add <pid>" && echo "mullvad split-tunnel pid delete <pid>" && echo "mullvad split-tunnel pid clear" '
 alias gpgsearch='pg --keyserver keyserver.ubuntu.com --search-keys $1'
-alias sls='tmux ls'
-alias gget='git clone https://github.com/cronos-hash/$1'
 alias ksesh='tmux kill-ses -t $1'
 alias detach='tmux detach'
 alias c="echo 'CMDS: isodrive, virt, macos, windows, linux, crypto, xmr, youtube, attach, detach, sls, nsesh, opsesh, die, relax, yeet, files, gimme, cloud , c' | lolcat"
-alias sudo='doas'
 #export PATH="$PATH:/home/greek/bin" #for xmonad
 #figlet -f catwalk "comp" -w 10000 | lolcat
-cowsay come here often? | lolcat -a -s 400
-mullvad status | lolcat
+#cowsay come here often? | lolcat -a -s 400
+#mullvad status | lolcat
 #task | lolcat
 alias gh="cat ~/repo/token/token && git push"
 #export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33'
+#cowsay enter the sk command to get started | lolcat
+#echo 'contact uni using that email'
+#fm6000 -f ~/Art -o 'Resonance Arch' -n -c blue
+cowsay -f $(ls /usr/share/cows/|shuf -n 1) use the sk command to get started | lolcat
+#colorscript random
+#gif-for-cli /home/greek/IsWDJWa.gif | lolcat
+timeout --foreground 0.455s asciiquarium
